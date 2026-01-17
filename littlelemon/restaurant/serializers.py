@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import Booking, MenuTable
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):#probably will be deleted as I will use djoser + simple jwt
     class Meta:
         model = User
         fields = ['url', 'username', 'email', 'groups']
